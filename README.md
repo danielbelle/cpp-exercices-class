@@ -27,7 +27,7 @@ int main() {
     bool condicaoLoop = false;
     do {
 
-
+      // SEU CODIGO AQUI
 
         verificaLeitura();
         condicaoLoop = verificaLoop(condicaoLoop);
