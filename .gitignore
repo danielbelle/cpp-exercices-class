@@ -1,3 +1,5 @@
 /.vscode/
 *.exe
 *.vscode
+funcao.cpp
+version.cpp

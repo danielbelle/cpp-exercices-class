@@ -5,6 +5,55 @@ de lógica de programação utilizando C++. Cada arquivo `.cpp` corresponde a um
 exercício diferente, com o enunciado da questão no início do arquivo e o código
 comentado para facilitar o entendimento.
 
+## Modelo Base
+
+Todos os exemplos seguem um padrão de estrutura para facilitar a leitura e
+reutilização.  
+Veja o modelo utilizado em [`base-ex.cpp`](./base-ex.cpp):
+
+```cpp
+/**
+ *
+
+ */
+#include <iostream>
+#include <limits>
+
+using namespace std;
+void verificaLeitura();
+bool verificaLoop(bool condicaoLoop);
+
+int main() {
+    bool condicaoLoop = false;
+    do {
+
+
+
+        verificaLeitura();
+        condicaoLoop = verificaLoop(condicaoLoop);
+    } while (condicaoLoop);
+
+    return 0;
+}
+
+void verificaLeitura() {
+    //caso de falha na leitura
+    if (cin.fail()) {
+        cin.clear();
+        cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+    }
+}
+
+bool verificaLoop(bool condicaoLoop) {
+    cout << "Digite 0 para sair ou 1 para continuar: " << endl;
+    cin >> condicaoLoop;
+    if (condicaoLoop != 0) {
+        !condicaoLoop;
+    }
+    return condicaoLoop;
+}
+```
+
 ## Questões Resolvidas
 
 ### Lista 1
@@ -55,6 +104,35 @@ comentado para facilitar o entendimento.
   _Leia uma nota de um aluno (entre 0 e 10). Se o valor digitado for inválido,
   peça novamente até que o usuário digite um valor válido._  
   [Veja a solução em `lista2-ex3.cpp`](./lista2-ex3.cpp)
+
+### Lista 3
+
+- **Questão 1**  
+  _Escreva uma função que receba como parâmetro um número inteiro, no intervalo
+  de 1 a 20, e retorne uma String correspondente ao número por extenso. Caso o
+  número seja menor que 1 ou maior que 20, o método deve retornar o texto
+  “inválido”._  
+  [Veja a solução em `lista3-ex1.cpp`](./lista3-ex1.cpp)
+
+- **Questão 2**  
+  _Criar uma função para calcular o n-ésimo número da série de Fibonacci. A
+  série inicia com os valores 1 e 1, e os números subsequentes são a soma dos
+  dois anteriores._  
+  [Veja a solução em `lista3-ex2.cpp`](./lista3-ex2.cpp)
+
+- **Questão 3**  
+  _Escreva uma função recursiva que calcule a potência XN. Nesse exemplo, X é um
+  valor real e N é um valor inteiro. Ambos são passados como parâmetros de
+  entrada da função._  
+  [Veja a solução em `lista3-ex3.cpp`](./lista3-ex3.cpp)
+
+- **Questão 4**  
+  _Faça uma leitura aprofundada do texto sobre Funções Matemáticas. Em seguida,
+  explore mais sobre as funções matemáticas de cmath, pesquisando sobre
+  aplicações e usos dessas funções. Por fim, elabore um programa em C++ que
+  demonstre o uso de ao menos 10 funções de diferentes categorias, e ao menos 3
+  constantes matemáticas dessa biblioteca._  
+  [Veja a solução em `lista3-ex4.cpp`](./lista3-ex4.cpp)
 
 ## Como clonar e executar os arquivos
 
