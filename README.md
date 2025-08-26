@@ -1,11 +1,13 @@
 # Lista de Exercícios em C++
 
-Este repositório contém soluções para questões propostas em uma lista de
-exercícios de lógica de programação utilizando C++. Cada arquivo `.cpp`
-corresponde a um exercício diferente, com o enunciado da questão no início do
-arquivo e o código comentado para facilitar o entendimento.
+Este repositório contém soluções para questões propostas em listas de exercícios
+de lógica de programação utilizando C++. Cada arquivo `.cpp` corresponde a um
+exercício diferente, com o enunciado da questão no início do arquivo e o código
+comentado para facilitar o entendimento.
 
 ## Questões Resolvidas
+
+### Lista 1
 
 - **Questão 1**  
   _Um analista está avaliando um processo. São realizadas duas avaliações, com
@@ -36,6 +38,23 @@ arquivo e o código comentado para facilitar o entendimento.
   for entre 10 e 20%, a infração é MÉDIA; até 50% a infração é GRAVE; e acima
   disso ela é GRAVÍSSIMA._  
   [Veja a solução em `lista1-ex3.cpp`](./lista1-ex3.cpp)
+
+### Lista 2
+
+- **Questão 1**  
+  _Peça ao usuário um número inteiro n e exiba os primeiros n termos da
+  sequência de Fibonacci usando while._  
+  [Veja a solução em `lista2-ex1.cpp`](./lista2-ex1.cpp)
+
+- **Questão 2**  
+  _Leia vários números inteiros do usuário e calcule a soma deles. O programa
+  deve parar quando o usuário digitar 0._  
+  [Veja a solução em `lista2-ex2.cpp`](./lista2-ex2.cpp)
+
+- **Questão 3**  
+  _Leia uma nota de um aluno (entre 0 e 10). Se o valor digitado for inválido,
+  peça novamente até que o usuário digite um valor válido._  
+  [Veja a solução em `lista2-ex3.cpp`](./lista2-ex3.cpp)
 
 ## Como clonar e executar os arquivos
 
