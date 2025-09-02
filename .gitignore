@@ -3,3 +3,4 @@
 *.vscode
 funcao.cpp
 version.cpp
+ponteiro*.cpp

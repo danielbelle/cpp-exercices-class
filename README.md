@@ -134,6 +134,26 @@ bool verificaLoop(bool condicaoLoop) {
   constantes matemáticas dessa biblioteca._  
   [Veja a solução em `lista3-ex4.cpp`](./lista3-ex4.cpp)
 
+### Lista 4
+
+- **Questão 1**  
+  _Escreva um programa que permita ao usuário inserir 10 números inteiros em um
+  array. O programa deve conter uma função que rotacione os elementos do array
+  para a direita uma vez (o primeiro vai para o segundo, o segundo vai para o
+  terceiro, até que o último elemento vai para o primeiro índice). Ao final, a
+  função principal (main), deve exibir o array resultante._  
+  [Veja a solução em `lista4-ex1.cpp`](./lista4-ex1.cpp)
+
+- **Questão 2**  
+  _Implemente uma função que rotacione os elementos do array. A função deve
+  receber, além do array, mais dois parâmetros:  
+  forward (bool): se true, a rotação ocorre dos menores índices para os maiores,
+  se false, o sentido inverte  
+  steps (int): indica quantos índices a rotação deve avançar, se por acaso o
+  usuário informar um número não positivo, a rotação ocorre de 1 em 1.  
+  Escreva também uma função principal (main) para testar o seu código._  
+  [Veja a solução em `lista4-ex2.cpp`](./lista4-ex2.cpp)
+
 ## Como clonar e executar os arquivos
 
 1. **Clone o repositório:**
