@@ -7,7 +7,7 @@
 
 using namespace std;
 void verificaLeitura();
-bool verificaLoop(bool condicaoLoop);
+bool verificaLoop();
 
 int main() {
     bool condicaoLoop = false;
@@ -16,7 +16,7 @@ int main() {
 
 
         verificaLeitura();
-        condicaoLoop = verificaLoop(condicaoLoop);
+        condicaoLoop = verificaLoop();
     } while (condicaoLoop);
 
     return 0;
@@ -30,11 +30,12 @@ void verificaLeitura() {
     }
 }
 
-bool verificaLoop(bool condicaoLoop) {
-    cout << "Digite 0 para sair ou 1 para continuar: " << endl;
-    cin >> condicaoLoop;
-    if (condicaoLoop != 0) {
-        !condicaoLoop;
-    }
-    return condicaoLoop;
+bool verificaLoop() {
+    int opcao;
+    do {
+        cout << "Digite 0 para sair ou 1 para continuar: ";
+        cin >> opcao;
+        verificaLeitura();
+    } while (opcao != 0 && opcao != 1);
+    return (opcao == 1);
 }
