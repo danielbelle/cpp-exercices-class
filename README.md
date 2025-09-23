@@ -85,8 +85,7 @@ bool verificaLoop() {
 ### Lista 3 (Funções)
 
 - **Questão 1**  
-  Número (1–20) por extenso ou “inválido”.  
-  [lista3-ex1.cpp](./lista3-ex1.cpp)
+  Número (1–20) por extenso ou "inválido". [lista3-ex1.cpp](./lista3-ex1.cpp)
 
 - **Questão 2**  
   n-ésimo Fibonacci (recursivo).  
@@ -118,6 +117,115 @@ bool verificaLoop() {
   Cadastro de alunos, códigos, notas (2–10), faltas, médias e relatório final.  
   [exercicio-guiado.cpp](./exercicio-guiado.cpp)
 
+## Estruturas de Dados Implementadas
+
+### Estruturas Customizadas (Implementação Manual)
+
+- **Lista Encadeada**  
+  Implementação básica de lista ligada com inserção no início, final e
+  remoção.  
+  Permite armazenamento dinâmico de elementos com ponteiros.  
+  [estrutura-lista.cpp](./estrutura-lista.cpp)
+
+- **Lista Ordenada**  
+  Lista ligada que mantém elementos ordenados automaticamente durante a
+  inserção.  
+  Útil quando é necessário manter dados sempre em ordem crescente.  
+  [estrutura-lista-ordenada.cpp](./estrutura-lista-ordenada.cpp)
+
+- **Pilha (Stack)**  
+  Estrutura LIFO (Last In, First Out) com operações push, pop e peek.  
+  Simula comportamento de uma pilha de pratos - último a entrar é primeiro a
+  sair.  
+  [estrutura-pilhas.cpp](./estrutura-pilhas.cpp)
+
+- **Fila (Queue)**  
+  Estrutura FIFO (First In, First Out) com operações enfileirar, desenfileirar e
+  peek.  
+  Simula uma fila comum - primeiro a entrar é primeiro a sair.  
+  [estrutura-filas.cpp](./estrutura-filas.cpp)
+
+## STL (Standard Template Library)
+
+### Contêineres Sequenciais
+
+- **Vector**  
+  Array dinâmico que permite acesso aleatório por índice e redimensionamento
+  automático.  
+  Ideal para casos onde se precisa de acesso rápido por posição e crescimento
+  dinâmico.  
+  [stl-vector.cpp](./stl-vector.cpp)
+
+- **List**  
+  Lista duplamente ligada que facilita inserções/remoções no meio da
+  estrutura.  
+  Não permite acesso por índice, mas é eficiente para inserções em qualquer
+  posição.  
+  [stl-list.cpp](./stl-list.cpp)
+
+- **Deque (Double-ended queue)**  
+  Combina vantagens de vector e list: acesso por índice + inserção eficiente nas
+  extremidades.  
+  É uma "fila de duas pontas" que permite operações rápidas no início e fim.  
+  [stl-deque.cpp](./stl-deque.cpp)
+
+### Adaptadores de Contêiner
+
+- **Stack**  
+  Adaptador que transforma outros contêineres em pilha LIFO.  
+  Oferece apenas operações push(), pop(), top() e size().  
+  [stl-stack.cpp](./stl-stack.cpp)
+
+- **Queue**  
+  Adaptador que transforma outros contêineres em fila FIFO.  
+  Oferece operações push(), pop(), front(), back() e size().  
+  [stl-queue.cpp](./stl-queue.cpp)
+
+## Exemplos Adicionais
+
+### Funções Matemáticas e Utilitárias
+
+- **Funções com `<cmath>`**  
+  Demonstra cálculos de circunferência, área, volume e área superficial de
+  esferas.  
+  Utiliza constantes como `M_PI` e funções como `pow()`.  
+  [funcao.cpp](./funcao.cpp)
+
+### Ponteiros e Manipulação de Arrays
+
+- **Ponteiro Básico**  
+  Função que recupera notas de alunos e calcula média usando ponteiros para
+  retorno múltiplo.  
+  [ponteiro1.cpp](./ponteiro1.cpp)
+
+- **Inversão de Array com Ponteiros**  
+  Implementa função swap e inversão de array usando aritmética de ponteiros.  
+  [ponteiro2.cpp](./ponteiro2.cpp)
+
+- **Array de Ponteiros**  
+  Demonstra como usar um array de ponteiros para acessar múltiplos arrays.  
+  [ponteiro4.cpp](./ponteiro4.cpp)
+
+### Utilitários
+
+- **Verificação de Versão C++**  
+  Programa simples que identifica qual padrão C++ está sendo usado na
+  compilação.  
+  [version.cpp](./version.cpp)
+
+## Comparativo: Quando Usar Cada Estrutura
+
+| Estrutura | Acesso por Índice | Inserção Início | Inserção Fim | Inserção Meio | Uso Recomendado             |
+| --------- | ----------------- | --------------- | ------------ | ------------- | --------------------------- |
+| `vector`  | O(1)              | O(n)            | O(1)\*       | O(n)          | Acesso frequente por índice |
+| `list`    | ✗                 | O(1)            | O(1)         | O(1)\*\*      | Muitas inserções/remoções   |
+| `deque`   | O(1)              | O(1)            | O(1)         | O(n)          | Operações nas extremidades  |
+| `stack`   | ✗                 | ✗               | O(1)         | ✗             | Algoritmos LIFO             |
+| `queue`   | ✗                 | ✗               | O(1)         | ✗             | Algoritmos FIFO             |
+
+\*O(1) amortizado  
+\*\*Se você já tem o iterador para a posição
+
 ## Como Clonar e Executar
 
 ```bash
@@ -148,7 +256,11 @@ Instale:
 
 ## Estrutura Sugerida
 
-- Reutilize `verificaLeitura()` e `verificaLoop()` para controlar loops.
+- Reutilize [`verificaLeitura()`](./base-ex.cpp) e
+  [`verificaLoop()`](./base-ex.cpp) para controlar loops.
 - Comente sempre o propósito de variáveis e condições.
+- Use as estruturas STL quando precisar de performance e confiabilidade.
+- Implemente estruturas customizadas apenas para fins educacionais ou requisitos
+  específicos.
 
 ---
