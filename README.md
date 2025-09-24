@@ -181,6 +181,20 @@ bool verificaLoop() {
   Oferece operações push(), pop(), front(), back() e size().  
   [stl-queue.cpp](./stl-queue.cpp)
 
+### Contêineres Associativos
+
+- **Set**  
+  Contêiner que armazena elementos únicos em ordem automática.  
+  Não permite duplicatas e mantém elementos sempre ordenados.  
+  Útil para verificar existência e eliminar duplicatas.  
+  [stl-set.cpp](./stl-set.cpp)
+
+- **Map**  
+  Contêiner que armazena pares chave-valor com chaves únicas e ordenadas.  
+  Permite associar dados através de chaves, similar a um dicionário.  
+  Ideal para relacionamentos e buscas por chave.  
+  [stl-map.cpp](./stl-map.cpp)
+
 ## Exemplos Adicionais
 
 ### Funções Matemáticas e Utilitárias
@@ -222,6 +236,8 @@ bool verificaLoop() {
 | `deque`   | O(1)              | O(1)            | O(1)         | O(n)          | Operações nas extremidades  |
 | `stack`   | ✗                 | ✗               | O(1)         | ✗             | Algoritmos LIFO             |
 | `queue`   | ✗                 | ✗               | O(1)         | ✗             | Algoritmos FIFO             |
+| `set`     | ✗                 | O(log n)        | O(log n)     | O(log n)      | Elementos únicos ordenados  |
+| `map`     | ✗                 | O(log n)        | O(log n)     | O(log n)      | Relações chave-valor        |
 
 \*O(1) amortizado  
 \*\*Se você já tem o iterador para a posição
