@@ -17,7 +17,7 @@ Todos os exemplos podem seguir o modelo em [`base-ex.cpp`](./base-ex.cpp):
 
 using namespace std;
 void verificaLeitura();
-bool verificaLoop();
+bool verificaLoop(string mensagem = "Digite 0 para sair ou 1 para continuar: ");
 
 int main() {
     bool condicaoLoop = false;
@@ -38,10 +38,10 @@ void verificaLeitura() {
     }
 }
 
-bool verificaLoop() {
+bool verificaLoop(string mensagem) {
     int opcao;
     do {
-        cout << "Digite 0 para sair ou 1 para continuar: ";
+        cout << mensagem << endl;
         cin >> opcao;
         verificaLeitura();
     } while (opcao != 0 && opcao != 1);
@@ -195,6 +195,21 @@ bool verificaLoop() {
   Ideal para relacionamentos e buscas por chave.  
   [stl-map.cpp](./stl-map.cpp)
 
+## Comparativo: Quando Usar Cada Estrutura
+
+| Estrutura | Acesso por Índice | Inserção Início | Inserção Fim | Inserção Meio | Uso Recomendado             |
+| --------- | ----------------- | --------------- | ------------ | ------------- | --------------------------- |
+| `vector`  | O(1)              | O(n)            | O(1)\*       | O(n)          | Acesso frequente por índice |
+| `list`    | ✗                 | O(1)            | O(1)         | O(1)\*\*      | Muitas inserções/remoções   |
+| `deque`   | O(1)              | O(1)            | O(1)         | O(n)          | Operações nas extremidades  |
+| `stack`   | ✗                 | ✗               | O(1)         | ✗             | Algoritmos LIFO             |
+| `queue`   | ✗                 | ✗               | O(1)         | ✗             | Algoritmos FIFO             |
+| `set`     | ✗                 | O(log n)        | O(log n)     | O(log n)      | Elementos únicos ordenados  |
+| `map`     | ✗                 | O(log n)        | O(log n)     | O(log n)      | Relações chave-valor        |
+
+\*O(1) amortizado  
+\*\*Se você já tem o iterador para a posição
+
 ## Exemplos Adicionais
 
 ### Funções Matemáticas e Utilitárias
@@ -220,27 +235,31 @@ bool verificaLoop() {
   Demonstra como usar um array de ponteiros para acessar múltiplos arrays.  
   [ponteiro4.cpp](./ponteiro4.cpp)
 
-### Utilitários
+## Manipulação de Arquivos
 
-- **Verificação de Versão C++**  
-  Programa simples que identifica qual padrão C++ está sendo usado na
-  compilação.  
-  [version.cpp](./version.cpp)
+- **tarefa-manipular-arquivo.cpp** — Programa interativo que permite criar uma
+  lista de tarefas (título, descrição, categoria e prioridade) e salva a tabela
+  formatada em "LISTA-DE-TAREFAS.txt".  
+  [tarefa-manipular-arquivo.cpp](./tarefa-manipular-arquivo.cpp)
 
-## Comparativo: Quando Usar Cada Estrutura
+- **manipuladores-ex1-arquivo.cpp** — Exemplo que gera uma tabela de produtos
+  (produto, quantidade, preço unitário e preço total), formata colunas com
+  manipuladores de fluxo e grava em "produtos.txt".  
+  [manipuladores-ex1-arquivo.cpp](./manipuladores-ex1-arquivo.cpp)
 
-| Estrutura | Acesso por Índice | Inserção Início | Inserção Fim | Inserção Meio | Uso Recomendado             |
-| --------- | ----------------- | --------------- | ------------ | ------------- | --------------------------- |
-| `vector`  | O(1)              | O(n)            | O(1)\*       | O(n)          | Acesso frequente por índice |
-| `list`    | ✗                 | O(1)            | O(1)         | O(1)\*\*      | Muitas inserções/remoções   |
-| `deque`   | O(1)              | O(1)            | O(1)         | O(n)          | Operações nas extremidades  |
-| `stack`   | ✗                 | ✗               | O(1)         | ✗             | Algoritmos LIFO             |
-| `queue`   | ✗                 | ✗               | O(1)         | ✗             | Algoritmos FIFO             |
-| `set`     | ✗                 | O(log n)        | O(log n)     | O(log n)      | Elementos únicos ordenados  |
-| `map`     | ✗                 | O(log n)        | O(log n)     | O(log n)      | Relações chave-valor        |
+- **manipuladores-ex1.cpp** — Versão de console do exercício de tabela de
+  produtos; demonstra setw, setprecision e alinhamento na saída padrão.  
+  [manipuladores-ex1.cpp](./manipuladores-ex1.cpp)
 
-\*O(1) amortizado  
-\*\*Se você já tem o iterador para a posição
+- **manipuladores-saidas.cpp** — Demonstra diversos manipuladores de saída:
+  bases numéricas (hex, oct), formatos de ponto flutuante (fixed, scientific),
+  setprecision, setw, setfill e boolalpha. Útil como referência rápida.  
+  [manipuladores-saidas.cpp](./manipuladores-saidas.cpp)
+
+- **manipuladores-arquivos.cpp** — Exemplo mínimo de escrita em arquivo
+  (ofstream) gravando linhas com tipos diferentes (string, inteiro, ponto
+  flutuante). Bom ponto de partida para entender fluxos de arquivo.  
+  [manipuladores-arquivos.cpp](./manipuladores-arquivos.cpp)
 
 ## Como Clonar e Executar
 

@@ -7,7 +7,7 @@
 
 using namespace std;
 void verificaLeitura();
-bool verificaLoop();
+bool verificaLoop(string mensagem = "Digite 0 para sair ou 1 para continuar: ");
 
 int main() {
     bool condicaoLoop = false;
@@ -30,10 +30,10 @@ void verificaLeitura() {
     }
 }
 
-bool verificaLoop() {
+bool verificaLoop(string mensagem) {
     int opcao;
     do {
-        cout << "Digite 0 para sair ou 1 para continuar: ";
+        cout << mensagem << endl;
         cin >> opcao;
         verificaLeitura();
     } while (opcao != 0 && opcao != 1);
